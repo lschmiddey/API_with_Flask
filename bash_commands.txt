@@ -1,0 +1,11 @@
+python3 -m venv venv
+. venv/bin/activate
+pip install Flask
+pip install pandas numpy sklearn requests
+pip freeze > requirements.txt
+cd app
+export FLASK_APP=main.py
+export FLASK_ENV=development
+flask run
+# for testing: start from Test folder
+python test.py
